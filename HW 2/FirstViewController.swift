@@ -10,38 +10,15 @@ import UIKit
 
 class FirstViewController: UIViewController {
     
-    @IBOutlet var backgroundView: UIView!
-    
-    private var redSliderValueOnFirstViewController: Float = 1
-    private var greenSliderValueOnFirstViewController: Float = 1
-    private var blueSliderValueOnFirstViewController: Float = 1
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        backgroundView.backgroundColor = .white
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let changeColorVC = segue.destination as! ChangeColorViewController
         changeColorVC.delegate = self
-        changeColorVC.redSliderValue = redSliderValueOnFirstViewController
-        changeColorVC.greenSliderValue = greenSliderValueOnFirstViewController
-        changeColorVC.blueSliderValue = blueSliderValueOnFirstViewController
+        changeColorVC.currentColor = view.backgroundColor
     }
 }
 
 extension FirstViewController: ChangeColorViewControllerDelegate {
-    func changeBackgroundColor(_ redSliderValue: Float,
-                               _ greenSliderValue: Float,
-                               _ blueSliderValue: Float) {
-        
-        backgroundView.backgroundColor = UIColor(red: CGFloat(redSliderValue),
-                                                 green: CGFloat(greenSliderValue),
-                                                 blue: CGFloat(blueSliderValue),
-                                                 alpha: 1)
-        
-        redSliderValueOnFirstViewController = redSliderValue
-        greenSliderValueOnFirstViewController = greenSliderValue
-        blueSliderValueOnFirstViewController = blueSliderValue
+    func changeBackgroundColor(_ color: UIColor) {
+        view.backgroundColor = color
     }
 }

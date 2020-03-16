@@ -9,7 +9,5 @@
 import UIKit
 
 protocol ChangeColorViewControllerDelegate {
-    func changeBackgroundColor(_ redSliderValue: Float,
-                               _ greenSliderValue: Float,
-                               _ blueSliderValue: Float)
+    func changeBackgroundColor(_ color: UIColor)
 }

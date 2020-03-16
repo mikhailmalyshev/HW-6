@@ -73,9 +73,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A86938C220D027C300E87976 /* HW 2 */ = {
+		A86938C220D027C300E87976 /* HW 6 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A86938D520D027C400E87976 /* Build configuration list for PBXNativeTarget "HW 2" */;
+			buildConfigurationList = A86938D520D027C400E87976 /* Build configuration list for PBXNativeTarget "HW 6" */;
 			buildPhases = (
 				A86938BF20D027C300E87976 /* Sources */,
 				A86938C020D027C300E87976 /* Frameworks */,
@@ -85,7 +85,7 @@
 			);
 			dependencies = (
 			);
-			name = "HW 2";
+			name = "HW 6";
 			productName = "HW 2";
 			productReference = A86938C320D027C300E87976 /* HW 6.app */;
 			productType = "com.apple.product-type.application";
@@ -106,7 +106,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A86938BE20D027C300E87976 /* Build configuration list for PBXProject "HW 2" */;
+			buildConfigurationList = A86938BE20D027C300E87976 /* Build configuration list for PBXProject "HW 6" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -119,7 +119,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A86938C220D027C300E87976 /* HW 2 */,
+				A86938C220D027C300E87976 /* HW 6 */,
 			);
 		};
 /* End PBXProject section */
@@ -322,7 +322,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A86938BE20D027C300E87976 /* Build configuration list for PBXProject "HW 2" */ = {
+		A86938BE20D027C300E87976 /* Build configuration list for PBXProject "HW 6" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A86938D320D027C400E87976 /* Debug */,
@@ -331,7 +331,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A86938D520D027C400E87976 /* Build configuration list for PBXNativeTarget "HW 2" */ = {
+		A86938D520D027C400E87976 /* Build configuration list for PBXNativeTarget "HW 6" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A86938D620D027C400E87976 /* Debug */,

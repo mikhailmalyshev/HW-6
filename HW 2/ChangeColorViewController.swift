@@ -20,11 +20,9 @@ class ChangeColorViewController: UIViewController {
     @IBOutlet weak var greenSlider: UISlider!
     @IBOutlet weak var blueSlider: UISlider!
     
-    var redSliderValue: Float = 1.0
-    var greenSliderValue: Float = 1.0
-    var blueSliderValue: Float = 1.0
-    
     var delegate: ChangeColorViewControllerDelegate!
+    
+    var currentColor : UIColor!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,9 +33,10 @@ class ChangeColorViewController: UIViewController {
         greenSlider.tintColor = .green
         blueSlider.tintColor = .blue
         
-        redSlider.value = redSliderValue
-        greenSlider.value = greenSliderValue
-        blueSlider.value = blueSliderValue
+        redSlider.value = Float(currentColor.rgba.red)
+        greenSlider.value = Float(currentColor.rgba.green)
+        blueSlider.value = Float(currentColor.rgba.blue)
+        
         
         setColor()
         setValue(for: redLabel, greenLabel, blueLabel)
@@ -56,9 +55,10 @@ class ChangeColorViewController: UIViewController {
     }
     
     @IBAction func doneButtonPressed(_ sender: UIButton) {
-        delegate.changeBackgroundColor(redSlider.value,
-                                       greenSlider.value,
-                                       blueSlider.value)
+        delegate.changeBackgroundColor(UIColor(red: CGFloat(redSlider.value),
+        green: CGFloat(greenSlider.value),
+        blue: CGFloat(blueSlider.value),
+        alpha: 1))
         
         dismiss(animated: true)
     }
@@ -83,5 +83,17 @@ class ChangeColorViewController: UIViewController {
     
     private func string(from slider: UISlider) -> String {
         String(format: "%.2f", slider.value)
+    }
+}
+
+extension UIColor {
+    var rgba: (red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) {
+        var red: CGFloat = 0
+        var green: CGFloat = 0
+        var blue: CGFloat = 0
+        var alpha: CGFloat = 0
+        getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+
+        return (red, green, blue, alpha)
     }
 }
